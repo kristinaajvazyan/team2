@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Сайт команды</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: url('текстура.jpg') center/cover;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    color: #000000; /* Добавлено, чтобы текст был виден на градиентном фоне */
+}
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            text-align: center;
+        }
+        nav a {
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+nav a:hover {
+    color: #231cea; /* Измените на цвет, который вы хотите при наведении */
+    font-size: 1.2em; /* Измените на желаемый размер шрифта при наведении */
+}
+        .block {
+            background-color: rgb(240, 255, 255);
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-family: 'Pacifico', cursive;
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .member {
+            width: 20%;
+            margin-bottom: 20px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .member img {
+            max-width: 100%;
+            height: 300px;
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.3s ease;
+        }
+        .member:hover img {
+                transform: scale(1.1);
+            }
+        footer {
+            background-color: rgb(192, 254, 255);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-family: 'Pacifico', cursive;
+        }
+        .logo{
+            max-width: 80px;
+            margin-left: -800px;
+        }
+        .background-image {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 300px;
+        }
+
+        .full-size {
+            width: 100%;
+            height: auto;
+            object-fit:contain;
+        }
+
+        .goal-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-family: 'Pacifico', cursive;
+            font-size: 24px;
+            z-index: 1;
+        }
+
+        .white-box {
+            background-color: rgb(240, 255, 255);
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 0px;
+            margin-top: 0px;
+        }
+
+        .text-inside {
+            flex: 1;
+        }
+
+        img.rounded {
+            border-radius: 10px;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            margin-top: 20px;
+            max-width: 400px; /* Установите максимальную ширину карусели */
+            margin: 0 auto; 
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel img {
+            width: 200px;
+            height: auto; 
+            object-fit: cover;
+        }
+
+        .carousel-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            font-size: 24px;
+            font-family: 'Pacifico', cursive;
+            text-align: center;
+            width: 100%;
+        }
+        #minsk-map {
+            background-color: rgb(240, 255, 255);
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-family: 'Pacifico', cursive;
+        }
+
+        .map-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 500px;
+            opacity:1;
+        }
+
+        .map-photo {
+            position: absolute;
+            max-width: 50px;
+            max-height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .map-photo:hover {
+            transform: scale(1.2);
+        }
+        #quotes {
+    background: url('текстура.jpg') center/cover;
+    color: #000000; /* Цвет текста на заднем фоне */
+    padding: 20px; /* Подстройте отступы по вашему усмотрению */
+}
+
+.quote {
+    background-color: rgba(255, 255, 255, 0.8); /* Прозрачный белый фон для текста цитат */
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Триумф Голубых Глаз</h1>
+        <nav>
+            <a href="#members">Участники</a>
+            <a href="#goal">Цель</a>
+            <a href="#quotes">Цитаты</a>
+        </nav>
+    </header>
+
+    <section id="members" class="block">
+        <h2>Состав dream team</h2>
+        <div class="row">
+            <div class="member">
+                <img class="rounded" src="alice.jpg" alt="Участник 1">
+                <p>Алиса Смелянская</p>
+            </div>
+            <div class="member">
+                <img class="rounded" src="kris.jpg" alt="Участник 2">
+                <p>Кристина Айвазян</p>
+            </div>
+            <div class="member">
+                <img class="rounded" src="liza.jpg" alt="Участник 3">
+                <p>Елизавета Ковалевская</p>
+            </div>
+        </div>
+
+    </section>
+    <section id="goal" class="block">
+        <div class="background-image">
+            <img src="море.jpg" class="full-size">
+            <div class="goal-text">
+                <h2>Цель команды</h2>
+                <p>Развивать проекты, которые предвосхищают будущее и взглядывают вперёд с ярким оптимизмом, подобно голубым глазам.</p>
+            </div>
+        </div>
+    </section>
+    <section id="goal" class="block">
+        <div class="white-box">
+            <div class="text-inside">
+                <h2>Про что наша команда?</h2>
+                <!-- Добавлен контейнер и элементы для карусели -->
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <img src="5.jpg" alt="Image 1">
+                        <img src="7.jpg" alt="Image 2">
+                        <img src="8.jpg" alt="Image 3">
+                        <img src="2.jpg" alt="Image 4">
+                        <img src="6.jpg" alt="Image 1">
+                        <img src="1.jpg" alt="Image 2">
+                        <img src="10.jpg" alt="Image 3">
+                        <img src="9.jpg" alt="Image 4">
+                    </div>
+                    <div class="carousel-text">Наша креативная команда</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quotes" class="block">
+        <h2>Цитаты участников</h2>
+        <div class="row">
+            <div class="quote">
+                <img src="k.png" alt="Цитата 2">
+                <p>"God is a woman"</p>
+            </div>
+            <div class="quote">
+                <img src="l.png" alt="Цитата 3">
+                <p>"Yeah, I`m unstoppable today"</p>
+            </div>
+            <div class="quote">
+                <img src="aa.png" alt="Цитата 1">
+                <p>"Ашалеть!"</p>
+            </div>
+        </div>
+    </section>
+    <section id="minsk-map">
+        <h2>Нас можно найти</h2>
+        <div class="map-container">
+            <img src="map.jpg" alt="Карта Минска" >
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2023 Триумф Голубых Глаз
+    </footer>
+
+    <script>
+        // JavaScript для карусели
+        const carousel = document.querySelector('.carousel');
+        const textElement = document.querySelector('.carousel-text');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            carousel.style.transform = `translateX(${-index * 100}%)`;
+
+            // Пример текстов для каждого слайда
+            const slideTexts = [
+                "Самодостаточность",
+                "Счастье",
+                "Развитие",
+                "Энергия",
+            ];
+
+            textElement.textContent = slideTexts[index];
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % 4;
+            showSlide(currentIndex);
+        }
+
+        setInterval(nextSlide, 1500); // Автоматическая смена слайдов каждые 3 секунды
+
+        // Первоначальное отображение первого слайда
+        showSlide(currentIndex);
+    </script>
+</body>
+</html>
